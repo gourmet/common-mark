@@ -17,7 +17,7 @@ Adds [CommonMark] support to [CakePHP 3] using the [league/commonmark] package.
 Using [Composer]:
 
 ```
-composer require gourmet/common-mark:dev-master
+composer require gourmet/common-mark:~1.0
 ```
 
 You then need to load the plugin. In `boostrap.php`, something like:
