@@ -4,7 +4,7 @@
 [![Total Downloads](https://poser.pugx.org/gourmet/common-mark/downloads.svg)](https://packagist.org/packages/gourmet/common-mark)
 [![License](https://poser.pugx.org/gourmet/common-mark/license.svg)](https://packagist.org/packages/gourmet/common-mark)
 
-Adds [CommonMark][commonmark] support to [CakePHP 3][cakephp].
+Adds [CommonMark] support to [CakePHP 3] using the [league/commonmark] package.
 
 ## What's included?
 
@@ -14,16 +14,11 @@ Adds [CommonMark][commonmark] support to [CakePHP 3][cakephp].
 
 ## Install
 
-Using [Composer][composer]:
+Using [Composer]:
 
 ```
-composer require gourmet/common-mark
+composer require gourmet/common-mark:dev-master
 ```
-
-Because this plugin has the type `cakephp-plugin` set in its own `composer.json`,
-[Composer][composer] will install it inside your /plugins directory, rather than
-in your `vendor-dir`. It is recommended that you add /plugins/gourmet to your
-`.gitignore` file and here's [why][composer:ignore].
 
 You then need to load the plugin. In `boostrap.php`, something like:
 
@@ -52,7 +47,8 @@ http://github.com/gourmet/common-mark/issues
 
 Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 
-[cakephp]:http://cakephp.org
-[composer]:http://getcomposer.org
-[composer:ignore]:http://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md
+[CommonMark]:http://commonmark.org
+[CakePHP 3]:http://cakephp.org
+[league/commonmark]:http://github.com/thephpleague/commonmark
+[Composer]:http://getcomposer.org
 [mit]:http://www.opensource.org/licenses/mit-license.php
