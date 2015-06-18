@@ -26,11 +26,11 @@
         , "source": "https://github.com/gourmet/common-mark"
     }
     , "require": {
-        "cakephp/cakephp": "3.0.*-dev"
+        "cakephp/cakephp": "~3.0"
         , "league/commonmark": "~0.5"
     }
     , "require-dev": {
-        "phpunit/phpunit": "4.1.*"
+        "phpunit/phpunit": "~4.0"
     }
     , "autoload": {
         "psr-4": {
