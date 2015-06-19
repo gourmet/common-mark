@@ -20,15 +20,36 @@ Using [Composer]:
 composer require gourmet/common-mark:~1.0
 ```
 
-You then need to load the plugin. In `boostrap.php`, something like:
+You then need to load the plugin. You can use the shell command:
+
+```
+bin/cake plugin load Gourmet/CommonMark
+```
+
+or by manually adding statement shown below to `boostrap.php`:
 
 ```php
-\Cake\Core\Plugin::load('Gourmet/CommonMark');
+Plugin::load('Gourmet/CommonMark');
 ```
 
 ## Usage
 
-{{@TODO documentation}}
+The plugin is basically a bridge *disguised* as a trait
+[`Gourmet\CommonMark\Utility\CommonMarkAwareTrait`][CommonMarkAwareTrait], so you could
+just `use` the trait from anywhere you wish.
+
+To simplify it, both, a behavior and a helper have also been created.
+
+```
+// in any table's `initialize()`:
+$this->loadBehavior('Gourmet/CommonMark.CommonMark');
+
+// in `App\View\AppView` or any view/controller for that matter:
+$this->loadHelper('Gourmet/CommonMark.CommonMark');
+```
+
+For more, please check the [tests] and the [league/commonmark] library.
+
 
 ## Patches & Features
 
@@ -52,3 +73,5 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [league/commonmark]:http://github.com/thephpleague/commonmark
 [Composer]:http://getcomposer.org
 [mit]:http://www.opensource.org/licenses/mit-license.php
+[CommonMarkAwareTrait]:https://github.com/gourmet/common-mark/blob/master/src/Utility/CommonMarkAwareTrait.php
+[tests]:https://github.com/gourmet/common-mark/blob/master/tests/TestCase/Utility/CommonMarkAwareTraitTest.php#L31-L62
