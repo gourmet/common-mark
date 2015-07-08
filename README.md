@@ -42,7 +42,7 @@ To simplify it, both, a behavior and a helper have also been created.
 
 ```
 // in any table's `initialize()`:
-$this->loadBehavior('Gourmet/CommonMark.CommonMark');
+$this->addBehavior('Gourmet/CommonMark.CommonMark');
 
 // in `App\View\AppView` or any view/controller for that matter:
 $this->loadHelper('Gourmet/CommonMark.CommonMark');
